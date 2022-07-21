@@ -74,7 +74,7 @@ export default {
         getLessonsByDay: 'user/getLessonsByDay'
     }),
     timetable() {
-        return this.getLessonsByDay({day: new Date()})
+        return this.getLessonsByDay({day: this.selectedDate.toDate()})
     },
     formattedDate() {
       return this.selectedDate.locale("ru").format("DD MMMM YYYY");
